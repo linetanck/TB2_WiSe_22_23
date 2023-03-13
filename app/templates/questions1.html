@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p class="location">you are here: New Article > question nr.: {{ q.id }} </p>
+<div class="q">
+
+
+
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+      <h2> {{ q.id }}. {{ q.content }} </h2>
+      {% for subfield in form.option %}
+      <tr>
+        <td>{{ subfield }}</td>
+        <td><p class="option">{{ subfield.label }}</p></td>
+      </tr>
+    <br>
+    {% endfor %}
+    </p>
+  <p>{{ form.submit() }}</p>
+</form>
+</div>
+
+{% endblock %}

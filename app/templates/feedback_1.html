@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p class="location">you are here: {{ url }} > <b>FINAL SCORE </b> </p>
+<div class="feedback1">
+<h1>{{ final_score }}</h1>
+<h2>{{ feedback_data.score_min }}-{{ feedback_data.score_max }}: {{ feedback_data.title }}</h2>
+
+<p> {{ feedback_data.text }}
+</p>
+
+  <p>
+
+  <form action ="" method = "post">
+    <p>if you do not want to bookmark this article, just return to the home screen </p>
+
+    {{ form.hidden_tag() }}
+{{ form.bookmark() }} {{ form.submit() }}
+  </p>
+</form>
+
+  <a href="{{ url_for('index') }}">Home</a>
+</div>
+
+
+{% endblock %}

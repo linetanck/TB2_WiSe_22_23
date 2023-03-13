@@ -1,0 +1,21 @@
+<table>
+        <tr valign="top">
+            <td><img src="{{ post.author.avatar(36) }}"></td>
+            <td>
+                <a href="{{ url_for('user', username=post.author.username) }}">
+                    {{ post.author.username }}
+                </a>
+                says:<br>{{ post.body }}<br>
+                {% if current_user.has_liked_post(post) %}
+    <a href="{{ url_for('like_action', post_id=post.id, action='unlike') }}" class="like"><b>REMOVE VOTE</b></a>
+  {% else %}
+    <a href="{{ url_for('like_action', post_id=post.id, action='like') }}" class="like"><b>VOTE UP</b></a>
+  {% endif %}
+            </td>
+        </tr>
+        <tr>
+          <td>
+            </td>
+          <td>{{ post.likes.count() }} votes</td>
+          </tr>
+</table>

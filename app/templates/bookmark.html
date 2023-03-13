@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p class="location">you are here: Bookmarks </p>
+<table style="table-layout:auto" class="center" width="80%">
+    <tr>
+    <th><h1 style="padding: 10px">{{ current_user.username }}'s bookmarks</h1></th>
+    <th><a href="{{ url_for('history') }}" style="padding:5px">   HISTORY</a></th>
+    </tr>
+    {% include '_entries.html' %}
+</table>
+{% endblock %}

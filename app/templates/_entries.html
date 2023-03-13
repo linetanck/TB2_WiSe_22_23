@@ -1,0 +1,22 @@
+<tr>
+    <td class="bookmark"><ul>
+    {% for bookmark in bookmarks %}
+      <li><b>{{ bookmark.title }}</b> <u>{{ bookmark.url }}</u>
+        <br>score: <b style="color:FFD966">{{ bookmark.score }}</b><br>
+      Checked article on: {{ bookmark.timestamp }}</li>
+    {% endfor %}
+    </ul>
+    </td>
+</tr>
+<tr>
+    <td>
+    {% if prev_url %}
+    <a href="{{ prev_url }}">Newer</a>
+    {% endif %}
+    </td>
+    <td>
+    {% if next_url %}
+    <a href="{{ next_url }}">Older</a>
+    {% endif %}
+    </td>
+</tr>

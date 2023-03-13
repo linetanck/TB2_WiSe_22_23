@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p class="location">you are here: Disclaimer </p>
+<div class="disclaimer">
+<h1>WELCOME!</h1>
+<h2>BUT BEFORE WE START....</h2>
+
+<p> … this application is here to help you check how scientific a newspaper article is.<br>
+  This does not refer to the scientific correctness of the sources the article refers to, but rather if the article refers to scientific sources. <br>
+  Scientific communication has been an area where confusion, fake news and conspiracy theories prosper so a certain degree of criticism is important for any form of media consumption.<br>
+  This app is supposed to help you identify articles that did not base their claims on valid sources.<br>
+  However, the questions are only a help and incentive for you to reflect the article critically. <br>
+  The score in the end is <b> ONLY AN INDICATION </b> nor does this app claim to be holistic. <br>
+  There will be questions that require your own research occasionally. These questions will be green. <br>
+  <b>Remember to fact check!</b></p>
+
+  <p>
+  <form action = "" method = "post">
+{{ form.checkbox() }}
+
+      {{ form.checkbox.label }}
+      <br>
+      {{ form.submit() }}
+  </p>
+</form>
+  <!-- <a href="{{ url_for('index') }}">Home</a> -->
+</div>
+
+
+{% endblock %}

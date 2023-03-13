@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p class="location">you are here: Home </p>
+  <h1 style="text-align:center"> HOME </h1>
+    {% if current_user.username %}
+    <h3 style="text-align:center"> logged in as: <a href="{{ url_for('user', username=current_user.username)}}">{{ current_user.username }}</a> !</h3>
+    {% endif %}
+
+    <table style="table-layout:auto" class="center">
+      <tr style="height:220px">
+        <td><a href="{{ url_for('forum') }}" class="darknav">Forum   </a></td>
+        <td><a href="{{ url_for('new_article') }}" class="yellownav">New Article</a></td>
+      </tr>
+      <tr style="height:220px">
+          <td><a href="{{ url_for('user', username=current_user.username) }}" class="lightnav">Settings</a></td>
+          <td><a href="{{ url_for('bookmarked') }}" class="darknav">Bookmarks</a></td>
+      </tr>
+
+    </table>
+    <table>
+    <tr>
+      <td><img src="static/img/logo.png" width="75px" height="100%"></td>
+      <td style="color:#FFD966"><b style="color:white"> Scientifically written</b> - A giude to identifying proper science communication<br>
+      Karoline Tanck, Wintersemester 2022/23
+    </td>
+    </tr>
+{% endblock %}
