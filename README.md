@@ -18,6 +18,7 @@ To run the applicaiton, one needs to install the following:
   flask
   flask_wtf
   flask-sqlalchemy
+  flask_migrate
   wtforms
   flask_login
   werkzeug-security
