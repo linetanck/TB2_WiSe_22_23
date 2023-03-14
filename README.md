@@ -21,5 +21,4 @@ To run the applicaiton, one needs to install the following:
   flask_migrate
   wtforms
   flask_login
-  werkzeug-security
   hashlib
