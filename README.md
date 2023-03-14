@@ -4,9 +4,7 @@ final submission for technological basics 2
 # Scientifically written
 ## A giude to identifying proper science communication
 ### Karoline Tanck (Matr.-Nr.: 3044699), Winter semester 2022/23
-
 ## Description
-
 The application runs on port 5001.
 
 A new user can be registered, but the following credentials can be used:
